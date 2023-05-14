@@ -1,0 +1,1 @@
+Celeste Speedrun Stat Tracker was made by Machliah and Nilrem.  The tracker script is made using python and gspread, and the website is made using sveltekit.
