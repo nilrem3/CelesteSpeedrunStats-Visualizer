@@ -1,3 +1,3 @@
 import {writable} from 'svelte/store'
 
-export const sheet_data = writable(null);
+export const sheet_data = writable([]);

@@ -1,6 +1,6 @@
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Celeste Speedrun Stats Visualizer</title>
+	<meta name="description" content="Celeste Speedrun Stats Visualizer" />
 </svelte:head>
 
 <script>
@@ -25,7 +25,7 @@
 		display_text = "loading..."
 		getData(sheet_id).then(value => {
 			if(value != "Error"){
-				sheet_data.set(JSON.stringify(value.data));
+				sheet_data.set(value.data);
 				display_text = "Successfully Loaded Sheet!";
 			}else{
 				display_text = "There was an error loading the sheet."
