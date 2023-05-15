@@ -3,6 +3,7 @@
 </script>
 
 <div>
+	<TabButton text="Home" tab_name = "/"/>
 	<TabButton text="IL Run Data" tab_name="ILRunData"/>
 	<TabButton text="Full Game Run Data" tab_name="FullRunData"/>
 	<TabButton text="Compare Session Data" tab_name="Compare"/>
