@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     export let tab_name;
     export let text;
 </script>

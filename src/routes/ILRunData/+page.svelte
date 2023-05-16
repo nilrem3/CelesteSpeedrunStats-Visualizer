@@ -1,27 +1,34 @@
 <script>
 // @ts-nocheck
 
-	import { onDestroy } from "svelte";
+	import { onDestroy, onMount } from "svelte";
     import {sheet_data} from "../stores.js"
+    import Chart from "../Chart.svelte"
 
-    let ils = []
+    let selected_level = "1a";
+    let level_selector;
+
+    async function process_sheet_data(data){
+        //TODO: figure out data for each chart here
+    }
 
     const unsubscribe = sheet_data.subscribe(data => {
-        let ils_object = {};
-        for(const run of data){
-            console.log(JSON.stringify(run));
-            if(run.Level in ils_object){
-                ils_object[run.Level] += 1;
-            }else{
-                ils_object[run.Level] = 1;
-            }
-        }
-
-        ils = Object.entries(ils_object);
+        process_sheet_data(data);
     });
     onDestroy(unsubscribe);
+
+    onMount(async () => {
+        level_selector.addEventListener("change", (event) => {
+            selected_level = event.target.value;
+        });
+    });
 </script>
 
-{#each ils as il}
-    {il[0]} was played {il[1]} times. <br>
-{/each}
+<select bind:this={level_selector}>
+    <option value="prologue">prologue</option>
+    <option value="1a">1a</option>
+    <option value="2a">2a</option>
+
+    <!--TODO: Finish this selector-->
+</select>
+
