@@ -32,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"chart.js": "^4.3.0",
 		"dotenv": "^16.0.3",
 		"g-sheets-api": "^2.1.3"
 	}
